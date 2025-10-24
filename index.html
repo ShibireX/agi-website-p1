@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash Mural - Collaborative Canvas Painting</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="brush-trail" id="brushTrail"></div>
+    
+    <header>
+        <div class="header-content">
+            <h1 class="title">Splash Mural</h1>
+            <p class="subtitle">Paint Together, Create Forever</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About</h2>
+                <p>
+                    Splash Mural is an innovative collaborative painting experience where multiple players use their mobile 
+                    devices as virtual paintbrushes to create stunning artwork on a shared canvas. Connect your phone, choose 
+                    your brush color, and watch as your collective creativity comes to life on the big screen! Whether you're 
+                    painting abstract masterpieces or working together on coordinated designs, Splash Mural transforms any 
+                    gathering into an interactive art session.
+                </p>
+            </div>
+        </section>
+
+        <section id="how-to-play" class="section alt-bg">
+            <div class="container">
+                <h2>How to Play</h2>
+                
+                <div class="guide-item">
+                    <div class="guide-image">
+                        <div class="placeholder-image">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="200" height="150" fill="#667eea"/>
+                                <text x="100" y="75" text-anchor="middle" fill="white" font-size="16">QR Code & Lobby</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="guide-content">
+                        <h3>Connecting Your Device</h3>
+                        <p>
+                            Scan the QR code with your mobile device to join the painting session. Pick your 
+                            brush color from the palette. Once a maximum of 4 players are connected, the host can begin the painting session!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="guide-item reverse">
+                    <div class="guide-image">
+                        <div class="placeholder-image">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="200" height="150" fill="#764ba2"/>
+                                <circle cx="100" cy="75" r="30" fill="white" opacity="0.3"/>
+                                <path d="M 80 75 Q 100 45, 120 75" stroke="white" stroke-width="3" fill="none"/>
+                                <text x="100" y="130" text-anchor="middle" fill="white" font-size="16">Touch & Paint</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="guide-content">
+                        <h3>Brush Controls</h3>
+                        <p>
+                            Swing your phone in the direction you want to paint, and the brush will follow your movement. Extra strong movements will generate special effects and sounds to enhance the experience.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="guide-item">
+                    <div class="guide-image">
+                        <div class="placeholder-image">
+                            <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="200" height="150" fill="#f093fb"/>
+                                <circle cx="60" cy="60" r="20" fill="#667eea" opacity="0.6"/>
+                                <circle cx="100" cy="80" r="25" fill="#764ba2" opacity="0.6"/>
+                                <circle cx="140" cy="65" r="22" fill="#f093fb" opacity="0.6"/>
+                                <text x="100" y="130" text-anchor="middle" fill="white" font-size="16">Collaborative Art</text>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="guide-content">
+                        <h3>Creating Together</h3>
+                        <p>
+                            Work together to create beautiful compositions! Coordinate with other players to paint synchronized 
+                            patterns, fill in sections, or add details to each other's work. After the painting session is over, the painting (together with the other creations from the session) will be displayed in a gallery on a secondary screen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="section">
+            <div class="container">
+                <h2>The Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <img src="images/alexanderdiezgonzalez.jpg" alt="Alexander Diez Gonzalez">
+                        </div>
+                        <h3>Alexander Diez Gonzalez</h3>
+                        <div class="member-tags">
+                            <span class="tag">Game Development</span>
+                            <span class="tag">User Testing</span>
+                            <span class="tag">Website Development</span>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <img src="images/alexanderkazakov.jpg" alt="Alexander Kazakov">
+                        </div>
+                        <h3>Alexander Kazakov</h3>
+                        <div class="member-tags">
+                            <span class="tag">Animation</span>
+                            <span class="tag">Shaders</span>
+                            <span class="tag">Game Development</span>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <img src="images/andreasgarcia.jpg" alt="Andreas Garcia">
+                        </div>
+                        <h3>Andreas Garcia</h3>
+                        <div class="member-tags">
+                            <span class="tag">Sound</span>
+                            <span class="tag">Interaction Programming</span>
+                            <span class="tag">Web Client Development</span>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <img src="images/nataliasempere.png" alt="Natalia Sempere">
+                        </div>
+                        <h3>Natalia Sempere</h3>
+                        <div class="member-tags">
+                            <span class="tag">3D Modeling</span>
+                            <span class="tag">UI Design</span>
+                            <span class="tag">Interaction Programming</span>
+                        </div>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-avatar">
+                            <img src="images/rasmushugosson.png" alt="Rasmus Hugosson">
+                        </div>
+                        <h3>Rasmus Hugosson</h3>
+                        <div class="member-tags">
+                            <span class="tag">Graphics Programming</span>
+                            <span class="tag">Shaders</span>
+                            <span class="tag">Game Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="github" class="section alt-bg">
+            <div class="container">
+                <h2>Github Repository</h2>
+                <div class="github-card">
+                    <h3>splash-mural</h3>
+                    <p>Collaborative canvas painting application with real-time mobile brush controls</p>
+                    <a href="https://github.com/ShibireX/agi-drawing" target="_blank" rel="noopener noreferrer" class="btn-primary">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
