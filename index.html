@@ -41,7 +41,21 @@
                         <div class="placeholder-image">
                             <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="200" height="150" fill="#667eea"/>
-                                <text x="100" y="75" text-anchor="middle" fill="white" font-size="16">QR Code & Lobby</text>
+                                <!-- QR Code inspired icon -->
+                                <g opacity="0.3" fill="white">
+                                    <rect x="70" y="45" width="12" height="12" rx="2"/>
+                                    <rect x="84" y="45" width="12" height="12" rx="2"/>
+                                    <rect x="112" y="45" width="12" height="12" rx="2"/>
+                                    <rect x="70" y="59" width="12" height="12" rx="2"/>
+                                    <rect x="98" y="59" width="12" height="12" rx="2"/>
+                                    <rect x="112" y="59" width="12" height="12" rx="2"/>
+                                    <rect x="84" y="73" width="12" height="12" rx="2"/>
+                                    <rect x="98" y="73" width="12" height="12" rx="2"/>
+                                </g>
+                                <!-- Phone/Device outline -->
+                                <rect x="85" y="50" width="30" height="45" rx="3" fill="none" stroke="white" stroke-width="3"/>
+                                <circle cx="100" cy="90" r="2" fill="white"/>
+                                <text x="100" y="130" text-anchor="middle" fill="white" font-size="16">QR Code & Lobby</text>
                             </svg>
                         </div>
                     </div>
@@ -61,7 +75,7 @@
                                 <rect width="200" height="150" fill="#764ba2"/>
                                 <circle cx="100" cy="75" r="30" fill="white" opacity="0.3"/>
                                 <path d="M 80 75 Q 100 45, 120 75" stroke="white" stroke-width="3" fill="none"/>
-                                <text x="100" y="130" text-anchor="middle" fill="white" font-size="16">Touch & Paint</text>
+                                <text x="100" y="130" text-anchor="middle" fill="white" font-size="16">Swing Your Brush</text>
                             </svg>
                         </div>
                     </div>
@@ -96,7 +110,166 @@
             </div>
         </section>
 
-        <section id="team" class="section">
+        <section id="technology" class="section">
+            <div class="container">
+                <h2>Technology</h2>
+                
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="40" fill="url(#grad1)" opacity="0.3"/>
+                                <circle cx="35" cy="45" r="8" fill="url(#grad1)"/>
+                                <circle cx="55" cy="40" r="6" fill="url(#grad1)"/>
+                                <circle cx="50" cy="60" r="10" fill="url(#grad1)"/>
+                                <circle cx="65" cy="55" r="7" fill="url(#grad1)"/>
+                                <defs>
+                                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h3>GPU Particle System</h3>
+                        <p>
+                            To achieve high-performance paint simulation with multiple players painting simultaneously, we developed 
+                            a GPU-based particle system. By offloading particle calculations to the graphics card, we can render 
+                            thousands of paint particles in real-time without compromising frame rate, creating smooth and responsive 
+                            visual feedback that makes the painting experience feel natural and fluid.
+                        </p>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="30" y="20" width="40" height="65" rx="5" fill="none" stroke="url(#grad2)" stroke-width="3"/>
+                                <circle cx="50" cy="78" r="3" fill="url(#grad2)"/>
+                                <path d="M 40 45 Q 50 35, 60 45" stroke="url(#grad2)" stroke-width="3" fill="none"/>
+                                <line x1="35" y1="55" x2="65" y2="65" stroke="url(#grad2)" stroke-width="2" opacity="0.5"/>
+                                <defs>
+                                    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h3>Motion-Based Interaction</h3>
+                        <p>
+                            The mobile controller uses the phone's built-in accelerometer and gyroscope sensors to detect movement 
+                            and rotation. This intuitive interaction model transforms your smartphone into a natural painting tool—simply 
+                            swing your device as if you're holding a physical paintbrush. The sensor data is processed in real-time to 
+                            translate physical gestures into brush strokes, with velocity and direction mapped directly to the visual output.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="development" class="section alt-bg">
+            <div class="container">
+                <h2>Development Journey</h2>
+                
+                <div class="journey-content">
+                    <div class="journey-section">
+                        <h3>Challenges & Solutions</h3>
+                        <p>
+                            One of our biggest technical hurdles was achieving low-latency communication between mobile devices 
+                            and the main display. Traditional web clients require trusted SSL certificates for WebRTC connections, 
+                            which created significant delays and complexity in a local network environment.
+                        </p>
+                        <p>
+                            <strong>Our Solution:</strong> We developed a creative "gray cloud" architecture that routes traffic 
+                            through our personal domain. This approach satisfied the browser's certificate requirements while 
+                            maintaining high-speed local WiFi connections. The result? Near-instantaneous brush response that 
+                            makes the painting feel direct and responsive, despite the technical constraints.
+                        </p>
+                        <p>
+                            Coordinating multiple players painting simultaneously while maintaining smooth performance also required 
+                            careful optimization of our network protocol and rendering pipeline. We implemented efficient state 
+                            synchronization and predictive interpolation to ensure all players see consistent results without 
+                            overwhelming the network or GPU.
+                        </p>
+                    </div>
+
+                    <div class="journey-section">
+                        <h3>Inspiration & Related Work</h3>
+                        <p>
+                            Our project draws inspiration from several successful collaborative gaming experiences. Games like 
+                            <em>It Takes Two</em> feature memorable collaborative painting sections that demonstrate the joy of 
+                            creative cooperation. Similarly, <em>Dreams</em> by Media Molecule showcases the potential of motion 
+                            controllers for artistic expression, while party games like <em>Jackbox</em> demonstrate how smartphones 
+                            can serve as versatile game controllers.
+                        </p>
+                        <p>
+                            We also looked to digital art installations and interactive museum exhibits that use motion tracking 
+                            and collaborative creation to engage audiences. These influences helped shape our vision of making 
+                            digital painting accessible, social, and fun.
+                        </p>
+                    </div>
+
+                    <div class="journey-section">
+                        <h3>Lessons Learned</h3>
+                        <p>
+                            <strong>Creative Problem-Solving Over Perfect Solutions:</strong> Sometimes the "hacky" solution 
+                            (like our gray cloud approach) is the right one when it unblocks development and meets user needs.
+                        </p>
+                        <p>
+                            <strong>Performance Budgets Are Critical:</strong> Early decisions to use GPU particles paid 
+                            dividends throughout development. Architectural choices made for scalability early on prevented 
+                            costly rewrites later.
+                        </p>
+                        <p>
+                            <strong>User Testing Reveals Unexpected Behaviors:</strong> We discovered that players naturally 
+                            created their own collaborative painting games and patterns—behavior we didn't anticipate but 
+                            ultimately embraced in our design.
+                        </p>
+                        <p>
+                            <strong>Motion Controls Require Careful Tuning:</strong> The sensitivity and responsiveness of 
+                            accelerometer-based controls needed extensive iteration. What feels natural to one person might 
+                            feel too sensitive or sluggish to another.
+                        </p>
+                        <p>
+                            <strong>Local Multiplayer Has Unique Magic:</strong> Despite the rise of online gaming, creating 
+                            something together in the same physical space generates a special energy and social connection 
+                            that's worth preserving and designing for.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item" style="animation-delay: 0.1s">
+                        <img src="images/gallery/agi-p1-gallery1.jpg" alt="Collaborative artwork 1">
+                    </div>
+                    <div class="gallery-item" style="animation-delay: 0.2s">
+                        <img src="images/gallery/agi-p1-gallery2.jpg" alt="Collaborative artwork 2">
+                    </div>
+                    <div class="gallery-item" style="animation-delay: 0.3s">
+                        <img src="images/gallery/agi-p1-gallery3.jpg" alt="Collaborative artwork 3">
+                    </div>
+                    <div class="gallery-item" style="animation-delay: 0.4s">
+                        <img src="images/gallery/agi-p1-gallery4.jpg" alt="Collaborative artwork 4">
+                    </div>
+                    <div class="gallery-item" style="animation-delay: 0.5s">
+                        <img src="images/gallery/agi-p1-gallery5.jpg" alt="Collaborative artwork 5">
+                    </div>
+                    <div class="gallery-item" style="animation-delay: 0.6s">
+                        <img src="images/gallery/agi-p1-gallery6.jpg" alt="Collaborative artwork 6">
+                    </div>
+                    <div class="gallery-item" style="animation-delay: 0.7s">
+                        <img src="images/gallery/agi-p1-gallery7.jpg" alt="Collaborative artwork 7">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="section alt-bg">
             <div class="container">
                 <h2>The Team</h2>
                 <div class="team-grid">
@@ -163,7 +336,7 @@
             </div>
         </section>
 
-        <section id="github" class="section alt-bg">
+        <section id="github" class="section">
             <div class="container">
                 <h2>Github Repository</h2>
                 <div class="github-card">
