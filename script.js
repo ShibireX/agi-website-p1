@@ -81,10 +81,18 @@ let lastScrollTop = 0;
 window.addEventListener('scroll', () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const header = document.querySelector('header');
+    const headerVideo = document.querySelector('.header-video');
     
     if (header) {
-        const scrolled = scrollTop * 0.5;
-        header.style.transform = `translateY(${scrolled}px)`;
+        const headerHeight = header.offsetHeight;
+        
+        // Only apply parallax when header is visible
+        if (scrollTop < headerHeight) {
+            const scrolled = scrollTop * 0.3;
+            if (headerVideo) {
+                headerVideo.style.transform = `translate(-50%, -60%) translateY(${scrolled}px)`;
+            }
+        }
     }
     
     lastScrollTop = scrollTop;
